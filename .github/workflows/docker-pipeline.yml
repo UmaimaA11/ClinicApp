@@ -21,8 +21,6 @@ jobs:
       - name: Construction et Push de l'image Docker
         uses: docker/build-push-action@v4
         with:
-          context: ./ClinicApp
+          context: .
           push: true
-          tags: |
-            oumaima805/clinicapp:v1
-            oumaima805/clinicapp:latest
+          tags: oumaima805/clinicapp:latest
