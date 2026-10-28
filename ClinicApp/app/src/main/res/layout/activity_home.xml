@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:background="@color/primary"
+        android:elevation="8dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_logo"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="1.5dp"
+            app:strokeColor="@color/text_light">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mdclogo1" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cabinet Médical"
+            android:textColor="@color/text_light"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/banner_clinic" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Nos Services"
+                android:gravity="center"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:id="@+id/btn_consultation"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:background="@color/card_bg"
+                    android:elevation="3dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/service_consultation" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Consultation"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/text_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_urgence"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@color/card_bg"
+                    android:elevation="3dp"
+                    android:layout_marginStart="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/service_urgence" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Urgence"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/text_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_suivi"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@color/card_bg"
+                    android:elevation="3dp"
+                    android:layout_marginStart="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/service_suivi" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Suivi médical"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/text_dark" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBook"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Prendre un rendez-vous"
+                android:textSize="18sp"
+                android:textColor="@color/text_light"
+                android:backgroundTint="@color/primary"
+                android:layout_margin="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="© 2025 Cabinet Médical - Tous droits réservés"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:padding="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

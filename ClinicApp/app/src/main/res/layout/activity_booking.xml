@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".ui.BookingActivity">
+
+    <!-- App Bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Prendre un rendez-vous"
+            app:titleTextColor="@color/text_light"
+            android:background="@color/primary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Date Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Choisissez une date"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"/>
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white" />
+
+            <!-- Time Slot Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Choisissez un créneau horaire"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"
+                android:layout_marginTop="16dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewTimeSlots"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_time_slot" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvEmptyState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aucun créneau disponible."
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Confirmation Button -->
+    <Button
+        android:id="@+id/btnConfirmBooking"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Confirmer le rendez-vous"
+        android:textSize="18sp"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/primary"
+        android:textColor="@color/text_light"
+        android:layout_margin="16dp"/>
+
+</LinearLayout>

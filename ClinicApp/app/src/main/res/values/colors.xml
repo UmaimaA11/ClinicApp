@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white_alpha_70">#B3FFFFFF</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="purple">#8692f7</color>
+    <color name="purple_200">#CE93D8</color>
+    <color name="purple_500">#9C27B0</color>
+    <color name="purple_f">#6A1B9A</color>
+
+
+
+    <color name="primarry">#1976D2</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="primary_dark">#006400</color>
+    <color name="bleu_marine">#000080</color>
+
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_dark">#333333</color>
+
+    <color name="text_hint">#BDBDBD</color>
+
+    <color name="background">#F8F8F8</color>
+
+    <color name="divider">#DDDDDD</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="gray">#888888</color>
+    <color name="dark_gray">#424242</color>
+
+    <color name="emergency">#F44336</color>
+    <color name="dark_red">#8B0000</color>
+    <color name="warning">#FF9800</color>
+    <color name="success">#4CAF50</color>
+    <color name="available">#4CAF50</color>
+    <color name="busy">#FF9800</color>
+    <color name="offline">#9E9E9E</color>
+
+
+    <color name="accent">#FF4081</color>
+    <color name="orange">#C76E00</color>
+    <color name="dark_Green">#006400</color>
+
+
+//Malak
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="purple_light">#BA68C8</color>
+    <color name="primary">#512DA8</color>
+    <color name="secondary">#9575CD</color>
+
+    <color name="text_light">#FFFFFF</color>
+    <color name="card_bg">#FFFFFF</color>
+
+    <color name="stroke_color">#E0E0E0</color>
+    <color name="selected_card_color">#0A8F8F</color>
+    //yasmin
+    <color name="lundi">#FF000000</color> <!-- black -->
+    <color name="mardi">#FFFFFFFF</color> <!-- white -->
+
+    <!-- Palette Médicale Bleue -->
+    <color name="mercredi">#0D47A1</color> <!-- md_blue_primary -->
+    <color name="jeudi">#E3F2FD</color> <!-- md_blue_light -->
+    <color name="vendredi">#2196F3</color> <!-- md_blue_medium -->
+    <color name="samedi">#009688</color> <!-- md_teal -->
+
+    <color name="dimanche">#0D47A1</color> <!-- primary -->
+    <color name="janvier">#1976D2</color> <!-- secondary -->
+    <color name="fevrier">#F5F7FA</color> <!-- background -->
+
+    <color name="mars">#1A237E</color> <!-- text_dark -->
+    <color name="avril">#546E7A</color> <!-- text_gray -->
+    <color name="mai">#FFFFFF</color> <!-- text_light -->
+
+    <color name="juin">#FFFFFF</color> <!-- card_bg -->
+    <color name="juillet">#90A4AE</color> <!-- gray -->
+    <color name="aout">#CFD8DC</color> <!-- stroke_color -->
+    <color name="septembre">#E53935</color> <!-- danger -->
+
+    <!-- Anciennes couleurs (pour compatibilité) -->
+    <color name="octobre">#8692f7</color> <!-- purple -->
+</resources>

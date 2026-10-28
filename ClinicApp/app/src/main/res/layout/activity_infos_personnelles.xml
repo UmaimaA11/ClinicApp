@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F7">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="24dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_header">
+
+        <TextView
+            android:text="Mes informations"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/btnEditProfile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/edit_profile"
+            android:src="@drawable/baseline_person_24"
+            app:tint="#FFFFFF"/>
+    </LinearLayout>
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:text="Nom complet"
+                        android:textSize="12sp"
+                        android:textColor="#777"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:id="@+id/txtFullName"
+                        android:text="Alexandre Dupont"
+                        android:textSize="16sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@android:drawable/edit_text"
+                        android:padding="8dp"
+                        android:focusable="false"
+                        android:enabled="false"/>
+
+                    <TextView
+                        android:text="Date de naissance"
+                        android:textSize="12sp"
+                        android:textColor="#777"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:id="@+id/txtBirthDate"
+                        android:text="15/03/1985"
+                        android:textSize="16sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@android:drawable/edit_text"
+                        android:padding="8dp"
+                        android:focusable="false"
+                        android:enabled="false"/>
+
+                    <TextView
+                        android:text="Groupe sanguin"
+                        android:textSize="12sp"
+                        android:textColor="#777"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Spinner
+                        android:id="@+id/spinnerBloodGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:padding="8dp"
+                        android:enabled="false"
+                        android:visibility="gone"/>
+                    <EditText
+                        android:id="@+id/txtBloodGroup"
+                        android:text="O+"
+                        android:textSize="16sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@android:drawable/edit_text"
+                        android:padding="8dp"
+                        android:focusable="false"
+                        android:enabled="false"
+                        android:visibility="visible"/>
+
+                    <TextView
+                        android:text="Allergies"
+                        android:textSize="12sp"
+                        android:textColor="#777"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:id="@+id/txtAllergiesCount"
+                        android:text="Aucune connue"
+                        android:textSize="16sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@android:drawable/edit_text"
+                        android:padding="8dp"
+                        android:focusable="false"
+                        android:enabled="false"/>
+
+                    <TextView
+                        android:text="Numéro de sécurité sociale"
+                        android:textSize="12sp"
+                        android:textColor="#777"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:id="@+id/txtSocialNumber"
+                        android:text="1 85 03 75 123 45 67"
+                        android:textSize="16sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"
+                        android:padding="8dp"
+                        android:focusable="false"
+                        android:enabled="false"
+                        android:inputType="number"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom navigation -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#264653"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/navDashboard"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:tint="#FFFFFF"
+                    android:src="@drawable/ic_home"/>
+                <TextView
+                    android:text="Dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/navRdv"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:tint="#FFFFFF"
+                    android:src="@drawable/ic_today"/>
+                <TextView
+                    android:text="RDV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/navProfil"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:tint="#FFFFFF"
+                    android:src="@drawable/ic_profile"/>
+                <TextView
+                    android:text="Profil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

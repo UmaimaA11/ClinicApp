@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ClinicApp">
+
+        <activity
+            android:name=".ui.HomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.SignInActivity"
+            android:exported="false" />
+
+        <activity android:name=".ui.SignUpActivity" />
+        <activity android:name=".ui.HelpActivity"/>
+        <activity android:name=".ui.ListeRendezVousActivity" />
+        <activity android:name=".ui.TimeSlotActivity" />
+        <activity android:name=".ui.BookingActivity" />
+        <activity android:name=".ui.MedDashboardActivity"/>
+        <activity android:name=".ui.PrescriptionActivity" />
+        <activity android:name=".ui.ManageTimeSlotsActivity" />
+        <activity android:name=".ui.AdminDashboardActivity" />
+        <activity android:name=".ui.ManageUsersActivity" />
+        <activity android:name=".ui.ManageAppointmentsActivity" />
+        <activity android:name=".malak.DashboardActivity" />
+        <activity android:name=".malak.InfosPersonnellesActivity" />
+        <activity android:name=".malak.activities.BookingActivity" />
+    </application>
+
+</manifest>

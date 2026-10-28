@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F9FA">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="#0A8F8F"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prendre rendez-vous"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choisissez votre médecin et un créneau"
+            android:textColor="#E0F2F1"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- CONTENT Wrapped in ScrollView to handle long pages -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_above="@id/bottomNavBar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choisir un médecin"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerDoctors"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choisir une date"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginTop="8dp">
+
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/layoutCreneaux"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Créneaux disponibles"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp">
+
+                    <GridLayout
+                        android:id="@+id/gridSlots"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="3"
+                        android:padding="12dp"
+                        android:alignmentMode="alignMargins"
+                        android:columnOrderPreserved="false" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:text="Confirmer le rendez-vous"
+                android:backgroundTint="#0A8F8F"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- BOTTOM NAV - Last so it's on top -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#264653"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/navDashboard"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:tint="#FFFFFF"
+                    android:src="@drawable/ic_home"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dashboard"
+                    android:textSize="10sp"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navRdv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:tint="#FFFFFF"
+                    android:src="@drawable/ic_today"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RDV"
+                    android:textSize="10sp"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navProfil"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:tint="#FFFFFF"
+                    android:src="@drawable/ic_profile"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profil"
+                    android:textSize="10sp"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

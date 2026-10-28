@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_patients"
+            android:padding="8dp"
+            android:background="@drawable/circle_background_white"
+            app:tint="#2563EB" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_item_patient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom du Patient"
+                android:textColor="#1E293B"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_item_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Consultation générale"
+                android:textColor="#64748B"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24 Oct"
+            android:textColor="#2563EB"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/stat_card"
+            android:alpha="0.8" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

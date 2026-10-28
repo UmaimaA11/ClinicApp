@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ClinicApp</string>
+    <string name="hello">hello world it is the text</string>
+
+    <string name="creneaux">creneaux</string>
+    <string name="dashboard_title">Tableau de Bord</string>
+    <string name="today_appointments">Aujourd\'hui</string>
+    <string name="pending_appointments">En attente</string>
+    <string name="emergency_count">Urgences</string>
+    <string name="quick_actions">Actions Rapides</string>
+    <string name="today_appointments_list">Rendez-vous Aujourd\'hui</string>
+    <string name="view_all">Voir tous</string>
+    <string name="need_help">Besoin d\'aide ?</string>
+    <string name="technical_support">Support technique</string>
+    <string name="email_support">Email support</string>
+    <string name="quick_guide">Guide d\'utilisation rapide</string>
+    <string name="status_available">Statut: Disponible</string>
+    <string name="change_status">Changer</string>
+
+    <string name="notifications_title">Notifications</string>
+    <string name="all_notifications">Toutes</string>
+    <string name="unread_notifications">Non lues</string>
+    <string name="urgent_notifications">Urgent</string>
+    <string name="no_notifications_title">Aucune notification</string>
+    <string name="no_notifications_message">Vous serez notifié des nouveaux rendez-vous et alertes</string>
+    <string name="no_notifications_icon_desc">Icône notifications vides</string>
+    <string name="mark_all_read_desc">Marquer toutes les notifications comme lues</string>
+    <string name="notification_options">Options de notification</string>
+
+    <string name="clear_all">Tout effacer</string>
+    <string name="notification_settings">Paramètres</string>
+
+    <string name="slots_title">Gestion des Créneaux</string>
+    <string name="save_all_slots">Sauvegarder tous les créneaux</string>
+
+    <string name="appointments_title">Rendez-vous</string>
+    <string name="today_appointments_title">RDV d\'Aujourd\'hui</string>
+
+    <string name="patients_title">Mes Patients</string>
+
+    //malak
+    <!-- Doctor related strings -->
+    <string name="doctor_name">Nom du médecin</string>
+    <string name="doctor_specialty">Spécialité</string>
+    <string name="doctor_photo">Photo du médecin</string>
+
+    <!-- Appointment related strings -->
+    <string name="appointment_date">Date du rendez-vous</string>
+    <string name="appointment_time">Heure du rendez-vous</string>
+    <string name="appointment_details">Détails du rendez-vous</string>
+
+    <!-- Common action strings -->
+    <string name="cancel">Annuler</string>
+    <string name="confirm">Confirmer</string>
+    <string name="edit_profile">Modifier le profil</string>
+    //
+
+    <!-- Admin Manage Users -->
+    <string name="title_manage_users">Gestion des Utilisateurs</string>
+    <string name="placeholder_user_name">Nom de l\'utilisateur</string>
+    <string name="placeholder_user_email">email@example.com</string>
+    <string name="placeholder_role">ROLE</string>
+    <string name="content_description_edit">Modifier</string>
+    <string name="content_description_delete">Supprimer</string>
+    <string name="content_description_add_user">Ajouter un utilisateur</string>
+
+    <!-- Admin Manage Appointments -->
+    <string name="title_manage_appointments">Gestion des Rendez-vous</string>
+    <string name="header_appointments">Planning Global</string>
+    <string name="desc_appointments">Consultez, déplacez ou annulez les rendez-vous du cabinet.</string>
+    <string name="label_patient">Patient:</string>
+    <string name="label_doctor">Docteur:</string>
+    <string name="label_date_time">Date &amp; Heure:</string>
+    <string name="label_motif">Motif:</string>
+
+    <!-- Admin Manage TimeSlots -->
+    <string name="title_manage_timeslots">Gestion des Créneaux</string>
+    <string name="header_timeslots">Disponibilités Médecins</string>
+    <string name="desc_timeslots">Définissez les horaires de consultation pour chaque médecin.</string>
+
+    <!-- Dialog Add/Edit -->
+    <string name="dialog_title_add">Ajouter un Utilisateur</string>
+    <string name="dialog_title_edit">Modifier l\'Utilisateur</string>
+    <string name="hint_name">Nom complet</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone">Téléphone</string>
+    <string name="hint_password">Mot de passe</string>
+    <string name="label_role">Rôle :</string>
+    <string name="action_cancel">Annuler</string>
+    <string name="action_save">Enregistrer</string>
+    <string name="action_confirm">Confirmer</string>
+</resources>

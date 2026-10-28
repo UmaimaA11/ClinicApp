@@ -1,0 +1,52 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardDoctor"
+    android:layout_width="140dp"
+    android:layout_height="160dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/imgDoctor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/doctor_photo"
+            android:src="@drawable/doctorplaceholder"
+            android:background="@drawable/circle_background"/>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/doctor_name"/>
+
+        <TextView
+            android:id="@+id/txtSpecialty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#777"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/doctor_specialty"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

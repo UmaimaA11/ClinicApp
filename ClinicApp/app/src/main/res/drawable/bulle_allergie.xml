@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Fond rouge pastel très clair -->
+    <solid android:color="#FFE5E5"/>
+
+    <!-- Coins arrondis -->
+    <corners android:radius="12dp"/>
+
+    <!-- Bord plus foncé -->
+    <stroke
+        android:width="2dp"
+        android:color="#D17F79"/> <!-- rouge foncé -->
+</shape>

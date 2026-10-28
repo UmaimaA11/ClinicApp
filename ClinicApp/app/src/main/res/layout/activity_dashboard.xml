@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F7">
+
+    <!-- ================= HEADER FIXE ================= -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/bg_header">
+
+        <TextView
+            android:id="@+id/txtBonjour"
+            android:text="Bonjour,"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtNomUtilisateur"
+            android:text="Alexandre Dupont"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardProchainRdv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#3CBABA">
+
+            <LinearLayout
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_calendar"
+                    app:tint="#FFFFFF"/>
+
+                <LinearLayout
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtProchainRdvLabel"
+                        android:text="Prochain rendez-vous"
+                        android:textColor="#EFFFFF"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/txtProchainRdvDetail"
+                        android:text="Dr. Sophie Martin - mer. 15 janv. à 09:30"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!-- ================= CONTENU SCROLLABLE ================= -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- ================= STATS (CARD) ================= -->
+            <androidx.cardview.widget.CardView
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txtRdvAVenir"
+                            android:text="2"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="#149C9C"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="RDV à venir"
+                            android:textSize="13sp"
+                            android:textColor="#666"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txtConsultations"
+                            android:text="1"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="#149C9C"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Consultations"
+                            android:textSize="13sp"
+                            android:textColor="#666"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txtAllergies"
+                            android:text="2"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="#149C9C"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Allergies"
+                            android:textSize="13sp"
+                            android:textColor="#666"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ================= MES RDV ================= -->
+            <TextView
+                android:text="Mes rendez-vous"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_margin="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/containerRdv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!-- Les cards de RDV peuvent être ajoutées dynamiquement ici -->
+
+                    <!-- RDV 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginEnd="16dp"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:padding="16dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="Dr. Sophie Martin"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="Médecin Généraliste"
+                                android:textSize="14sp"
+                                android:textColor="#777"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="mer. 15 janv. • 09:30"
+                                android:textSize="14sp"
+                                android:textColor="#149C9C"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="consultation de routine"
+                                android:textSize="13sp"
+                                android:textColor="#555"
+                                android:layout_marginTop="4dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="À venir"
+                                android:textSize="12sp"
+                                android:textColor="#149C9C"
+                                android:layout_marginTop="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- RDV 2 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginEnd="16dp"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:padding="16dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="Dr. Pierre Dubois"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="Cardiologue"
+                                android:textSize="14sp"
+                                android:textColor="#777"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="lun. 20 janv. • 10:15"
+                                android:textSize="14sp"
+                                android:textColor="#149C9C"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="Suivi cardiaque"
+                                android:textSize="13sp"
+                                android:textColor="#555"
+                                android:layout_marginTop="4dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="À venir"
+                                android:textSize="12sp"
+                                android:textColor="#149C9C"
+                                android:layout_marginTop="6dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- ================= CONSEILS ================= -->
+            <TextView
+                android:text="Conseils santé"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_margin="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:padding="16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@android:drawable/btn_star_big_on"
+                        app:tint="#149C9C"/>
+
+                    <TextView
+                        android:text="N'oubliez pas votre rappel vaccin grippe cette saison."
+                        android:textSize="14sp"
+                        android:layout_marginStart="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ================= PROFIL MEDICAL ================= -->
+            <TextView
+                android:text="Mon profil médical"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_margin="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtMedicalBloodGroup"
+                        android:text="Groupe sanguin : A+"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/txtMedicalAllergies"
+                        android:text="Allergies : Pénicilline, Arachides"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/txtMedicalSocialNumber"
+                        android:text="N° Sécurité Sociale : 1 85 03 75 114 089 42"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ================= BARRE DE NAVIGATION ================= -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#264653"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3">
+
+            <!-- Dashboard -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/navDashboard"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:tint="#FFFFFF"
+                    android:src="@drawable/ic_home"/>
+
+                <TextView
+                    android:text="Dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- Rendez-vous -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/navRdv"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:tint="#FFFFFF"
+                    android:src="@drawable/ic_today"/>
+
+                <TextView
+                    android:text="RDV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- Profil -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/navProfil"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:tint="#FFFFFF"
+                    android:src="@drawable/ic_profile"/>
+
+                <TextView
+                    android:text="Profil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout> <!-- Fermeture du LinearLayout parent du CardView -->
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout> <!-- Fermeture du LinearLayout racine -->
